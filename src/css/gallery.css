@@ -125,3 +125,10 @@ a:focus img {
     0 0 0 20px rgba(78, 117, 255, 0.6), 0 0 0 0px rgba(78, 117, 255, 1);
   }
 }
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 2rem;
+}

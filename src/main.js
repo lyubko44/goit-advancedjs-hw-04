@@ -34,7 +34,6 @@ searchForm.addEventListener('submit', async event => {
 
   form.reset();
   page = 1;
-  renderLoading();
 
   try {
     const images = await fetchImages(searchParam, perPage, page);

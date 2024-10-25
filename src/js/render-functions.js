@@ -57,12 +57,14 @@ export const renderImages = images => {
     fragment.appendChild(createImageCard(image));
   });
 
-  const ul = document.createElement('ul');
-  ul.classList.add('gallery-list');
-  ul.appendChild(fragment);
+  let ul = gallery.querySelector('.gallery-list');
+  if (!ul) {
+    ul = document.createElement('ul');
+    ul.classList.add('gallery-list');
+    gallery.appendChild(ul);
+  }
 
-  gallery.innerHTML = '';
-  gallery.appendChild(ul);
+  ul.appendChild(fragment);
 };
 
 export const renderError = (message = 'An error occurred while loading images.') => {
